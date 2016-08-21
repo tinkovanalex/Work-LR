@@ -7,7 +7,7 @@ class Circle{
 		private void processIt() throws IOException {
 			//Создадим стандартный поток ввода
 			BufferedReader stdin = new BufferedReader(new InputStreamReader (System.in));
-			System.out.println("Введите радиус круга: ");
+			System.out.println("Enter radius of the circle: ");
 			s1 = stdin.readLine(); //Введем текст в поле message
 			//Преобразуем строку в число и выполним вычисления.
 			//Предусмотрим обработку ошибок преобразования сроки в число.
@@ -16,7 +16,7 @@ class Circle{
 				square = 2 * Math.PI * radius;
 				System.out.println("R=" + radius + "\tS=" + square);
 			} catch (Exception ex){
-				System.out.println("Не удалось преобразовать текст " + s1 + "в число!");
+				System.out.println("Could not convert the text "+ s1 +" in the number!");
 			}			
 		}
 		public static void main (String[] args) throws IOException { 
