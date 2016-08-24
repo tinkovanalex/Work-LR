@@ -1,8 +1,8 @@
 
 import java.io.*;
 class Circle{
-		private double radius, square;
-		private String s1;
+		private double radius, square, circuit;
+		private String s1, s2;
 		
 		private void processIt() throws IOException {
 			//Создадим стандартный поток ввода
@@ -13,8 +13,10 @@ class Circle{
 			//Предусмотрим обработку ошибок преобразования сроки в число.
 			try {
 				radius = Double.parseDouble(s1);
-				square = 2 * Math.PI * radius;
-				System.out.println("R=" + radius + "\tS=" + square);
+				
+				circuit = 2 * Math.PI * radius;
+				square = Math.PI * Math.pow(radius, 2);
+				System.out.println("R = " + radius + "\tS = " + square + "\tL = " + circuit);
 			} catch (Exception ex){
 				System.out.println("Could not convert the text "+ s1 +" in the number!");
 			}			
